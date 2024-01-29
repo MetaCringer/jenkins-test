@@ -13,9 +13,8 @@ for (def project in projects){
         }
         definition {
             cpsScm {
-                
                 scm {
-                    git("https://github.com/${owner}/${project}.git")
+                    git("https://github.com/${owner}/${project}.git", "master")
                 }
                 scriptPath("Jenkinsfile")
                 lightweight(true)
