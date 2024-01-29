@@ -1,7 +1,7 @@
-projects = ["realworld-spring-boot-native", "MASTG-Hacking-Playground", "flask-realworld-example-app"]
-owner = "MetaCringer"
+def projects = ["realworld-spring-boot-native", "MASTG-Hacking-Playground", "flask-realworld-example-app"]
+def owner = "MetaCringer"
 folder("jobs")
-project=projects[0]
+def project=projects[0]
 pipelineJob("jobs/${project}") {
     // parameters {
     // }
