@@ -13,11 +13,12 @@ for (project in projects){
         }
         definition {
             cpsScm {
+                
                 scm {
                     git("https://github.com/${owner}/${project}.git")
                 }
                 scriptPath("Jenkinsfile")
-                sandbox()
+                lightweight(true)
             }
         }
     }
