@@ -6,7 +6,8 @@ folder('jobs') {
 }
 for (project in projects){
 
-
+    echo "jobs/${project}"
+    
     pipelineJob("jobs/${project}") {
         parameters {
 
