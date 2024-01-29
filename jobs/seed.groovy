@@ -1,14 +1,15 @@
 projects = ["realworld-spring-boot-native", "MASTG-Hacking-Playground", "flask-realworld-example-app"]
 owner = "MetaCringer"
-
-pipelineJob("realworld-spring-boot-native") {
+folder("jobs")
+project=projects[0]
+pipelineJob("jobs/${project}") {
     // parameters {
     // }
     definition {
         cpsScm {
             
             scm {
-                git("https://github.com/MetaCringer/realworld-spring-boot-native.git")
+                git("https://github.com/${owner}/${project}.git")
             }
             scriptPath("Jenkinsfile")
             lightweight(true)
