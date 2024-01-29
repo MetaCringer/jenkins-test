@@ -1,26 +1,17 @@
 projects = ["realworld-spring-boot-native", "MASTG-Hacking-Playground", "flask-realworld-example-app"]
 owner = "MetaCringer"
 
-folder('jobs') {
-    displayName('jobs')
-}
-for (project in projects){
-
-    echo "jobs/${project}"
-    
-    pipelineJob("jobs/${project}") {
-        parameters {
-
-        }
-        definition {
-            cpsScm {
-                
-                scm {
-                    git("https://github.com/${owner}/${project}.git")
-                }
-                scriptPath("Jenkinsfile")
-                lightweight(true)
+pipelineJob("jobs/${project}") {
+    // parameters {
+    // }
+    definition {
+        cpsScm {
+            
+            scm {
+                git("https://github.com/MetaCringer/realworld-spring-boot-native.git")
             }
+            scriptPath("Jenkinsfile")
+            lightweight(true)
         }
     }
 }
