@@ -1,7 +1,7 @@
 projects = ["realworld-spring-boot-native", "MASTG-Hacking-Playground", "flask-realworld-example-app"]
 owner = "MetaCringer"
 
-pipelineJob("jobs/${project}") {
+pipelineJob("realworld-spring-boot-native") {
     // parameters {
     // }
     definition {
