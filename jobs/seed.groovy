@@ -9,17 +9,17 @@ for (def project in projects){
     
     pipelineJob("jobs/${project}") {
         parameters {
-            string name: 'REPO', defaultValue: "https://github.com/${owner}/${project}"
+            stringParam('myParameterName', 'my default stringParam value', 'my description')
+            stringParam('REPO', "https://github.com/${owner}/${project}", "")
             if (project == "realworld-spring-boot-native"){
-                string name: 'IMAGE_TAG', defaultValue: "${image_tag}"
+                stringParam('IMAGE_TAG', "${image_tag}"
             }
-            
-            string name: 'ARTIFACTORY_URL', defaultValue: "http://artifactory:8081"
-            string name: 'SNYK_TOKEN_ID', defaultValue: "snyk"
-            string name: 'ARTIFACTORY_TOKEN_ID', defaultValue: "artifactory"
-            string name: 'JDK_TOOL', defaultValue: "jdk17"
-            string name: 'DOCKER_TOOL', defaultValue: "main"
-            string name: 'SNYK_TOOL', defaultValue: "main"
+            stringParam('ARTIFACTORY_URL', "http://artifactory:8081", "")
+            stringParam('SNYK_TOKEN_ID', "snyk", "")
+            stringParam('ARTIFACTORY_TOKEN_ID', "artifactory", "")
+            stringParam('JDK_TOOL', "jdk17", "")
+            stringParam('DOCKER_TOOL', "main", "")
+            stringParam('SNYK_TOOL', "main", "")
         }
         definition {
             cpsScm {
