@@ -9,7 +9,6 @@ for (def project in projects){
     
     pipelineJob("jobs/${project}") {
         parameters {
-            stringParam('myParameterName', 'my default stringParam value', 'my description')
             stringParam('REPO', "https://github.com/${owner}/${project}", "")
             if (project == "realworld-spring-boot-native"){
                 stringParam('IMAGE_TAG', "${image_tag}", "")
