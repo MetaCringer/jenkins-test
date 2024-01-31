@@ -12,7 +12,7 @@ for (def project in projects){
             stringParam('myParameterName', 'my default stringParam value', 'my description')
             stringParam('REPO', "https://github.com/${owner}/${project}", "")
             if (project == "realworld-spring-boot-native"){
-                stringParam('IMAGE_TAG', "${image_tag}"
+                stringParam('IMAGE_TAG', "${image_tag}", "")
             }
             stringParam('ARTIFACTORY_URL', "http://artifactory:8081", "")
             stringParam('SNYK_TOKEN_ID', "snyk", "")
