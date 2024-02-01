@@ -21,6 +21,7 @@ for (def project in projects){
             stringParam('ARTIFACTORY_TOKEN_ID', "artifactory", "")
             if(project == "MASTG-Hacking-Playground"){
                 stringParam('MOBSF_TOKEN_ID', "mobsf", "")
+                stringParam('MOBSF_HOST', "mobsf:8000", "")
             }
             stringParam('JDK_TOOL', "${jdk_tool}", "")
             stringParam('DOCKER_TOOL', "main", "")
