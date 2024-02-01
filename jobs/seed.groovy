@@ -16,6 +16,9 @@ for (def project in projects){
             stringParam('ARTIFACTORY_URL', "http://artifactory:8081", "")
             stringParam('SNYK_TOKEN_ID', "snyk", "")
             stringParam('ARTIFACTORY_TOKEN_ID', "artifactory", "")
+            if(project == "MASTG-Hacking-Playground"){
+                stringParam('MOBSF_TOKEN_ID', "mobsf", "")
+            }
             stringParam('JDK_TOOL', "jdk17", "")
             stringParam('DOCKER_TOOL', "main", "")
             stringParam('SNYK_TOOL', "main", "")
