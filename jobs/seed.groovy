@@ -15,7 +15,6 @@ for (def project in projects){
             stringParam('REPO', "https://github.com/${owner}/${project}", "")
             if (project == "realworld-spring-boot-native"){
                 stringParam('IMAGE_TAG', "${image_tag}", "")
-                stringParam('DOCKER_TOOL', "main", "")
             }
             if(project == "MASTG-Hacking-Playground"){
                 stringParam('MOBSF_TOKEN_ID', "mobsf", "")
@@ -24,6 +23,7 @@ for (def project in projects){
             if(project != "flask-realworld-example-app"){
                 stringParam('JDK_TOOL', "${jdk_tool}", "")
             }
+            stringParam('DOCKER_TOOL', "main", "")
             stringParam('ARTIFACTORY_URL', "http://artifactory:8081", "")
             stringParam('SNYK_TOKEN_ID', "snyk", "")
             stringParam('ARTIFACTORY_TOKEN_ID', "artifactory", "")
